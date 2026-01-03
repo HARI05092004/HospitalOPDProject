@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OPD Appointment</title>
+  <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+<div class="card">
+  <h2>OPD Appointment</h2>
+
+  <form id="opdForm">
+    <input id ="EmailId" placeholder="Email Id" required>
+    <input id="patientName" placeholder="Patient Name" required>
+    <select id="department" required>
+        <option value="">Select Department</option>
+        <option value="General Medicine">General Medicine</option>
+        <option value="Cardiology">Cardiology</option>
+        <option value="Orthopedics">Orthopedics</option>
+        <option value="Dermatology">Dermatology</option>
+    </select>
+
+    <select id="doctor" required>
+        <option value="">Select Doctor</option>
+        <option value="Dr. Arun – General Physician">Dr. Deva – General Physician</option>
+        <option value="Dr. Meena – Cardiologist">Dr. Harini – Cardiologist</option>
+        <option value="Dr. Raj – Orthopedic">Dr. Raj – Orthopedic</option>
+        <option value="Dr. Sita – Dermatologist">Dr. Sita – Dermatologist</option>
+    </select>
+
+    <input type="date" id="date" required>
+    <input type="time" id="time" required>
+    <textarea id="problem" placeholder="Problem"></textarea>
+
+    <button id = button1 type="submit">Book Appointment</button>
+  </form>
+  <button id="button2" type="button" onclick="window.location.href='dashboard.html'"> ⬅️Back</button>
+</div>
+
+<script src="opd.js"></script>
+</body>
+</html>

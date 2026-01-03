@@ -1,0 +1,70 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Online Appointment Booking System</h1>
+
+  <div class="nav">
+    <span>Welcome, </span>
+    <div>
+      <a href="appointment.html">Appointments</a>
+      <a href="login.html" class="logout">Logout</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Book Appointment</h2>
+
+    <label>Select Date</label>
+    <input type="date">
+
+    <label>Select Time</label>
+    <select>
+      <option>Select Time</option>
+      <option>10:00 AM</option>
+      <option>11:00 AM</option>
+      <option>03:00 PM</option>
+      <option>05:00 PM</option>
+    </select>
+
+    <label>Reason</label>
+    <textarea placeholder="Write your reason..."></textarea>
+
+    <button>Book Appointment</button>
+  </div>
+</div>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hospital OPD Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>🏥 Hospital OPD Dashboard</h1>
+  <p>Welcome, <span id="username">Patient</span></p>
+</header>
+
+<section class="dashboard">
+  <div class="card" onclick="bookAppointment()">🩺<br>Book OPD</div>
+  <div class="card" onclick="viewAppointments()">📅<br>My Appointments</div>
+  <div class="card" onclick="viewReports()">🧾<br>Reports</div>
+  <div class="card logout" onclick="logout()">🚪<br>Logout</div>
+</section>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

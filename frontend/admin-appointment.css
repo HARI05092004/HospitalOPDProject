@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: 
+    
+    url("./images/admin-dashboard.png");
+
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+#button2 {
+  width: 15%;
+  padding: 12px;
+  
+  background: rgba(250, 169, 169, 0.95);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}

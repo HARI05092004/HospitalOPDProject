@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Online Appointment Booking System</h1>
+
+  <div class="card">
+    <h2>User Login</h2>
+
+    <!-- USER LOGIN FORM -->
+    <form id="loginForm">
+      <input id="email" type="email" placeholder="Email" required>
+      <input id="password" type="password" placeholder="Password" required>
+
+      <button id = "button1"type="submit">Login</button>
+    </form>
+
+    <p>Don't have an account?
+      <a href="signup.html">Sign up here</a>
+    </p>
+
+    <!-- 🔽 ADMIN LOGIN BUTTON -->
+    <hr>
+
+    <button class="admin-btn" onclick="goAdminLogin()">
+      Admin Login
+    </button>
+  </div>
+</div>
+
+<script>
+  function goAdminLogin() {
+    window.location.href = "admin-login.html";
+  }
+</script>
+
+<script src="login.js"></script>
+
+</body>
+</html>

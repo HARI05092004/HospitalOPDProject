@@ -1,0 +1,108 @@
+<h2>My Appointments</h2>
+
+<table border="1" width="100%">
+  <thead>
+    <tr>
+      <th>Department</th>
+      <th>Doctor</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody id="myAppointments"></tbody>
+</table>
+<button id="button2" type="button" onclick="window.location.href='dashboard.html'"> ⬅️Back</button>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+body {
+  background-image: 
+    
+    url("./images/ChatGPT\ Image\ Jan\ 3\,\ 2026\,\ 01_21_07\ PM.png");
+
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+button {
+  width: 15%;
+  padding: 12px;
+  margin-left:84%;
+  background: rgba(250, 169, 169, 0.95);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+</style>
+<script>
+const userEmail = localStorage.getItem("userEmail");
+
+// 🔐 Security check
+if (!userEmail) {
+  alert("Please login again");
+  window.location.href = "login.html";
+}
+
+async function loadMyAppointments() {
+  try {
+    const res = await fetch(`http://localhost:5000/api/appointments/my/${userEmail}`
+
+    );
+    
+    if (!res.ok) {
+      throw new Error("Failed to fetch");
+    }
+
+    const data = await res.json();
+    const table = document.getElementById("myAppointments");
+    table.innerHTML = "";
+
+    if (data.length === 0) {
+      table.innerHTML = `
+        <tr>
+          <td colspan="5" style="text-align:center;">
+            No appointments found
+          </td>
+        </tr>
+      `;
+      
+      return;
+    }
+    
+    data.forEach(app => {
+      const status = app.status || "pending";
+
+      table.innerHTML += `
+        <tr>
+          <td>${app.department}</td>
+          <td>${app.doctor}</td>
+          <td>${app.date}</td>
+          <td>${app.time}</td>
+          <td style="font-weight:bold; color:${
+            status === "accepted" ? "green" :
+            status === "rejected" ? "red" : "orange"
+          }">
+            ${status.toUpperCase()}
+          </td>
+        </tr>
+      `;
+    });
+
+  } catch (error) {
+    console.error(error);
+    alert("Failed to load appointments");
+  }
+}
+
+loadMyAppointments();
+</script>

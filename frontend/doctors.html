@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>View Doctors</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("./images/doctorsmanage.png") no-repeat center center/cover;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .top-actions {
+      margin-bottom: 20px;
+    }
+
+    .back {
+      background-color: #6c757d;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .photo {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>Doctors List</h2>
+
+  <div class="top-actions">
+    <button class="back" onclick="window.location.href='admin-dashboard.html'">
+      ← Back to Dashboard
+    </button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Photo</th>
+        <th>Doctor Name</th>
+        <th>Department</th>
+        <th>Specialization</th>
+        <th>Experience</th>
+        <th>Contact</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><img src="./images/arun.png" class="photo"></td>
+        <td>Dr. Arun</td>
+        <td>General Medicine</td>
+        <td>General Physician</td>
+        <td>8 Years</td>
+        <td>deva@gmail.com</td>
+      </tr>
+
+      <tr>
+        <td><img src="./images/harini.png" class="photo"></td>
+        <td>Dr. Harini</td>
+        <td>Cardiology</td>
+        <td>Cardiologist</td>
+        <td>6 Years</td>
+        <td>harini@gmail.com</td>
+      </tr>
+
+      <tr>
+        <td><img src="./images/raj.png" class="photo"></td>
+        <td>Dr. Raj</td>
+        <td>Orthopedics</td>
+        <td>Orthopedic Surgeon</td>
+        <td>10 Years</td>
+        <td>raj@gmail.com</td>
+      </tr>
+      <tr>
+        <td><img src="./images/sita.png" class="photo"></td>
+        <td>Dr. Sita</td>
+        <td>Orthopedics</td>
+        <td>Dermatologist</td>
+        <td>10 Years</td>
+        <td>sita@gmail.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
